@@ -164,6 +164,8 @@ PressAndReleaseKey( keyCode )
 PressAndReleaseKey( keyName )
 PressAndReleaseKey( keyCode, time )
 PressAndReleaseKey( keyName, time )
+PressAndReleaseKey( time, keyCode [,keyCode] )
+PressAndReleaseKey( time, keyName [,keyName] )
 ```
 ## 参数
 keyCode  
@@ -184,6 +186,8 @@ PressAndReleaseKey()(30)
 PressAndReleaseKey()(30, 50)
 PressAndReleaseKey()("KEY_A")
 PressAndReleaseKey()("KEY_A", 50) 
+PressAndReleaseKey()(50, 30, 31) 
+PressAndReleaseKey()(50, "KEY_A",  "KEY_B") 
 ```
 ***
 # PressMouseButton()
@@ -240,6 +244,8 @@ PressAndReleaseMouseButton( keyCode )
 PressAndReleaseMouseButton( keyName )
 PressAndReleaseMouseButton( keyCode, time )
 PressAndReleaseMouseButton( keyName, time )
+PressAndReleaseMouseButton( time, keyCode [,keyCode] )
+PressAndReleaseMouseButton( time, keyName [,keyName] )
 ```
 ## 参数
 keyCode  
@@ -260,6 +266,8 @@ PressAndReleaseMouseButton()(272)
 PressAndReleaseMouseButton()(272, 50)
 PressAndReleaseMouseButton()("BTN_LEFT")
 PressAndReleaseMouseButton()("BTN_LEFT", 50) 
+PressAndReleaseMouseButton()(50, 272, 273) 
+PressAndReleaseMouseButton()(50, "BTN_LEFT",  "BTN_RIGHT") 
 ```
 ***
 # MoveMouseWheel()
@@ -273,8 +281,8 @@ click
 ## 返回值
 无
 ## 备注
-正值表示车轮向上移动。  
-负值表示车轮向下移动。
+正值表示滚轮向上移动。  
+负值表示滚轮向下移动。
 ## 示例
 ```
 MoveMouseWheel(3)
