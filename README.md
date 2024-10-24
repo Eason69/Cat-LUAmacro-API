@@ -465,6 +465,15 @@ OutputLogMessage("运行时间：",time)
 
 ## 键盘按键对应表
 
+<style>
+  table {
+    width: 100%;
+    display: block;
+    overflow-x: auto;
+  }
+</style>
+
+<div style="overflow-x:auto;">
 | 按键名               | 值   |
 |----------------------|------|
 | KEY_RESERVED         | 0    |
@@ -644,24 +653,19 @@ OutputLogMessage("运行时间：",time)
 | KEY_HOMEPAGE         | 172  |
 | KEY_REFRESH          | 173  |
 | KEY_EXIT             | 174  |
-| KEY_MOVE             | 175  |
-| KEY_EDIT             | 176  |
-| KEY_SCROLLUP         | 177  |
-| KEY_SCROLLDOWN       | 178  |
-| KEY_KPLEFTPAREN      | 179  |
-| KEY_KPRIGHTPAREN     | 180  |
-| KEY_NEW              | 181  |
-| KEY_REDO             | 182  |
+| KEY_MOVE            
+
 
 
 ## 鼠标按键对应表
 
-| 按键名      | 值   |
-|-------------|------|
-| BTN_LEFT    | 272  |
-| BTN_RIGHT   | 273  |
-| BTN_MIDDLE  | 274  |
-| BTN_SIDE    | 275  |
-| BTN_EXTRA   | 276  |
-| BTN_FORWARD | 277  |
-| BTN_TASK    | 278  |
+| 按键名         | 值   |
+|-------------|-----|
+| BTN_LEFT    | 272 |
+| BTN_RIGHT   | 273 |
+| BTN_MIDDLE  | 274 |
+| BTN_SIDE    | 275 |
+| BTN_EXTRA   | 276 |
+| BTN_FORWARD | 277 |
+| BTN_BACK    | 278 |
+| BTN_TASK    | 279 |
