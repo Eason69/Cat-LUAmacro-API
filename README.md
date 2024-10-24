@@ -465,7 +465,6 @@ OutputLogMessage("运行时间：",time)
 
 ## 键盘按键对应表
 
-~~~
 | 按键名               | 值   |
 |----------------------|------|
 | KEY_RESERVED         | 0    |
@@ -653,9 +652,6 @@ OutputLogMessage("运行时间：",time)
 | KEY_KPRIGHTPAREN     | 180  |
 | KEY_NEW              | 181  |
 | KEY_REDO             | 182  |
-~~~
-
-
 
 ## 鼠标按键对应表
 
