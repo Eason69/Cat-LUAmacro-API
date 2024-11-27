@@ -461,6 +461,128 @@ time = GetRunningTime() --获取系统运行时间
 OutputLogMessage("运行时间：",time)
 ```
 ***
+# UvcInit()
+初始化采集卡或者USB摄像头
+```
+bool GetRunningTime(video_id)
+
+```
+## 参数
+video_id
+采集卡的序号,一般为0
+## 返回值
+bool    
+成功返回 true
+失败返回 false
+## 备注
+无
+## 示例
+```
+err = uvcInit(0) --初始化序号为0的采集卡
+OutputLogMessage("采集卡是否启动",err)
+```
+***
+# UvcDestroy()
+关闭采集卡
+```
+UvcDestroy()
+
+```
+## 参数
+无
+## 返回值
+无
+## 备注
+无
+## 示例
+```
+UvcDestroy()
+```
+***
+# UvcLoadTemplateImages()
+初始化相似度算法，加载图片集
+```
+num = UvcLoadTemplateImages(int mode, const std::string& proj_name)
+
+```
+## 参数
+mode
+选择相似度算法模式  
+1:TEMPLATE算法    
+2:HASH算法    
+
+proj_name   
+选择要使用的图集名字
+## 返回值
+num
+图集内的图片数量
+## 备注
+图集通过宏管理网页进行上传
+## 示例
+```
+n = UvcLoadTemplateImages(1,"text")
+OutputLogMessage("加载图片数量",n)
+```
+***
+# UvcFindBestTemplateMatch()
+通过采集卡获取局部图像并与加载的图集进行相似度对比，返回相似度最高的图片名字
+```
+name = UvcFindBestTemplateMatch(int mode, int crop_x, int crop_y, int crop_width, int crop_height, double threshold)
+
+```
+## 参数
+mode    
+选择相似度算法模式   
+1:TEMPLATE算法    
+2:HASH算法    
+
+crop_x  
+开始裁剪的x坐标    
+
+crop_y  
+开始裁剪的y坐标    
+
+crop_width  
+裁剪图片的长度 
+
+crop_height     
+裁剪图片的高度     
+
+threshold
+相似度阈值 
+## 返回值
+name
+图集内的相似度最高的图片名字
+## 备注
+采集卡获取的坐标自动缩放到1280*720,请根据实际分辨率进行换算
+## 示例
+```
+name = UvcLoadTemplateImages(100, 100, 320, 320, 0.5)
+OutputLogMessage("相似度最高的图片是",name)
+```
+***
+# UvcFindColor()
+返回指定像素点的RGB值
+```
+rgb = UvcFindColor(int x, int y)
+```
+## 参数
+x
+需要获取像素颜色的x坐标
+
+y
+需要获取像素颜色的y坐标
+## 返回值
+rgb
+std::tuple<int, int, int>类型的rgb值
+## 备注
+图集通过宏管理网页进行上传
+## 示例
+```
+rgb = UvcFindColor(100, 100)
+OutputLogMessage("x坐标100 y坐标100的颜色是", rgb)
+```
+***
 # 键值附录
 
 ## 键盘按键对应表
