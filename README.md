@@ -1,5 +1,6 @@
 # Cat-LUAmacro-API
-cat Lua API是一组使用Lua编程语言的函数,可以轻松对键鼠进行各种宏操作。
+cat Lua API是一组使用Lua编程语言的函数,可以轻松对键鼠进行各种宏操作。      
+
 ***
 # 脚本的事件处理函数
 在 cat Lua 中你需要实施 setup() 和 loop() 。
