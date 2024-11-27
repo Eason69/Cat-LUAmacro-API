@@ -468,7 +468,7 @@ bool GetRunningTime(video_id)
 
 ```
 ## 参数
-video_id
+video_id        
 采集卡的序号,一般为0
 ## 返回值
 bool    
@@ -514,7 +514,7 @@ mode
 proj_name   
 选择要使用的图集名字
 ## 返回值
-num
+num     
 图集内的图片数量
 ## 备注
 图集通过宏管理网页进行上传
@@ -551,7 +551,7 @@ crop_height
 threshold
 相似度阈值 
 ## 返回值
-name
+name    
 图集内的相似度最高的图片名字
 ## 备注
 采集卡获取的坐标自动缩放到1280*720,请根据实际分辨率进行换算
@@ -567,13 +567,13 @@ OutputLogMessage("相似度最高的图片是",name)
 rgb = UvcFindColor(int x, int y)
 ```
 ## 参数
-x
+x       
 需要获取像素颜色的x坐标
 
-y
+y       
 需要获取像素颜色的y坐标
 ## 返回值
-rgb
+rgb     
 std::tuple<int, int, int>类型的rgb值
 ## 备注
 图集通过宏管理网页进行上传
